@@ -4,9 +4,7 @@ import "./NavLinks.css";
 const NavLinks = () => {
   return (
     <ul className="nav-links">
-      <NavLink to="/">
-        Home
-      </NavLink>
+      <NavLink to="/">Home</NavLink>
       <li>
         <NavLink to="/posts">Posts</NavLink>
       </li>
