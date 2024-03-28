@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Post from "./Post";
 import "./PostList.css";
 import NewPost from "./NewPost";
-import Modal from "./Modal";
 
 const PostList = () => {
-  const [isModalOpen, setIsModalOpen] = useState(true);
   const [bodyValue, setBodyValue] = useState("default body");
   const [authorValue, setAuthorValue] = useState("default author");
 
@@ -17,25 +15,12 @@ const PostList = () => {
     setAuthorValue(e.target.value);
   };
 
-  const modalCloseHandler = () => {
-    setIsModalOpen(false);
-  };
-
-  const modalOpenHandler = () => {
-    setIsModalOpen(false);
-  };
-
   return (
     <>
-      {isModalOpen && (
-        <Modal onClose={modalCloseHandler}>
-          <NewPost
-            onBodyChange={bodyChangeHandler}
-            onAuthorChange={authorChangeHandler}
-          />
-        </Modal>
-      )}
-
+      <NewPost
+        onBodyChange={bodyChangeHandler}
+        onAuthorChange={authorChangeHandler}
+      />
       <ul className="posts">
         <Post author={bodyValue} body={authorValue} />
       </ul>
