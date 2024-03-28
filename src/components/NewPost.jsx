@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+/* eslint-disable react/prop-types */
 import styles from "./NewPost.module.css";
 
 const NewPost = (props) => {
@@ -6,14 +6,25 @@ const NewPost = (props) => {
     <form className={styles.form}>
       <p>
         <label htmlFor="body">Body</label>
-        <textarea name="body" id="body" cols="30" rows="10" onChange={props.onBodyChange}></textarea>
+        <textarea
+          name="body"
+          id="body"
+          cols="30"
+          rows="10"
+          onChange={props.onBodyChange}
+        ></textarea>
       </p>
       <p>
-      <label htmlFor="author">Author</label>
-      <input type="text" name="author" id="author" onChange={props.onAuthorChange} />
+        <label htmlFor="author">Author</label>
+        <input
+          type="text"
+          name="author"
+          id="author"
+          onChange={props.onAuthorChange}
+        />
       </p>
     </form>
-  )
-}
+  );
+};
 
-export default NewPost
+export default NewPost;
