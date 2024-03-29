@@ -1,12 +1,14 @@
 /* eslint-disable react/prop-types */
 import classes from "./Modal.module.css";
 
-const Modal = ({ children, onClose }) => {
+const Modal = (props) => {
+
+
   return (
     <>
-      <div className={classes.overlay} onClick={onClose} />
+      <div className={classes.overlay} onClick={props.onClose}/>
       <dialog open className={classes.modal}>
-        {children}
+        {props.children}
       </dialog>
     </>
   );

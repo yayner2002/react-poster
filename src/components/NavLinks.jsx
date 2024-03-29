@@ -11,6 +11,18 @@ const NavLinks = () => {
       <li>
         <NavLink to="/places">Places</NavLink>
       </li>
+      <li>
+        <NavLink to="/all-posts">All Posts</NavLink>
+
+      </li>
+      <li>
+        <NavLink to="/sign-in">Login</NavLink>
+        
+      </li>
+      <li>
+        <NavLink to="/logout">Logout</NavLink>
+        
+      </li>
     </ul>
   );
 };
